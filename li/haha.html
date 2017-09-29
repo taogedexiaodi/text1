@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="time"></div>
+		<script>
+			(function() {
+				var time = {
+					"format": "yyyy-MM-dd",
+					"show": function(dom) {
+						setInterval(function() {
+						var date = new Date();
+							document.querySelector(dom).innerText = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+						}, 1000);
+
+					}
+				};
+				this.time = time;
+			})();
+			time.show("#time");
+		</script>
+	</body>
+
+</html>
